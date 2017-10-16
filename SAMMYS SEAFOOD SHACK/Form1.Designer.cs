@@ -1,6 +1,6 @@
 ﻿namespace SAMMYS_SEAFOOD_SHACK
 {
-    partial class Form1
+    partial class sammysSeafoodShack
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sammysSeafoodShack));
             this.lobsterLabel = new System.Windows.Forms.Label();
             this.musselLabel = new System.Windows.Forms.Label();
             this.saltyWaterLabel = new System.Windows.Forms.Label();
             this.lobsterInput = new System.Windows.Forms.TextBox();
             this.musselsInput = new System.Windows.Forms.TextBox();
             this.saltywaterInput = new System.Windows.Forms.TextBox();
-            this.receipt = new System.Windows.Forms.Label();
             this.calcTotalButton = new System.Windows.Forms.Button();
             this.subtotal = new System.Windows.Forms.Label();
             this.taxButton = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.calcChange = new System.Windows.Forms.Button();
             this.printreceiptButton = new System.Windows.Forms.Button();
             this.tenderedInput = new System.Windows.Forms.TextBox();
+            this.newOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lobsterLabel
@@ -83,38 +84,31 @@
             this.lobsterInput.Location = new System.Drawing.Point(83, 9);
             this.lobsterInput.Name = "lobsterInput";
             this.lobsterInput.Size = new System.Drawing.Size(40, 20);
-            this.lobsterInput.TabIndex = 3;
+            this.lobsterInput.TabIndex = 1;
             // 
             // musselsInput
             // 
             this.musselsInput.Location = new System.Drawing.Point(83, 43);
             this.musselsInput.Name = "musselsInput";
             this.musselsInput.Size = new System.Drawing.Size(40, 20);
-            this.musselsInput.TabIndex = 4;
+            this.musselsInput.TabIndex = 2;
             // 
             // saltywaterInput
             // 
             this.saltywaterInput.Location = new System.Drawing.Point(83, 80);
             this.saltywaterInput.Name = "saltywaterInput";
             this.saltywaterInput.Size = new System.Drawing.Size(40, 20);
-            this.saltywaterInput.TabIndex = 5;
-            // 
-            // receipt
-            // 
-            this.receipt.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.receipt.Location = new System.Drawing.Point(193, 9);
-            this.receipt.Name = "receipt";
-            this.receipt.Size = new System.Drawing.Size(321, 318);
-            this.receipt.TabIndex = 6;
+            this.saltywaterInput.TabIndex = 3;
             // 
             // calcTotalButton
             // 
             this.calcTotalButton.Location = new System.Drawing.Point(36, 106);
             this.calcTotalButton.Name = "calcTotalButton";
             this.calcTotalButton.Size = new System.Drawing.Size(122, 23);
-            this.calcTotalButton.TabIndex = 7;
+            this.calcTotalButton.TabIndex = 4;
             this.calcTotalButton.Text = "Calculate Total";
             this.calcTotalButton.UseVisualStyleBackColor = true;
+            this.calcTotalButton.Click += new System.EventHandler(this.calcTotalButton_Click);
             // 
             // subtotal
             // 
@@ -210,32 +204,45 @@
             this.calcChange.Location = new System.Drawing.Point(36, 255);
             this.calcChange.Name = "calcChange";
             this.calcChange.Size = new System.Drawing.Size(122, 23);
-            this.calcChange.TabIndex = 18;
+            this.calcChange.TabIndex = 6;
             this.calcChange.Text = "Calculate Change";
             this.calcChange.UseVisualStyleBackColor = true;
+            this.calcChange.Click += new System.EventHandler(this.calcChange_Click);
             // 
             // printreceiptButton
             // 
             this.printreceiptButton.Location = new System.Drawing.Point(36, 304);
             this.printreceiptButton.Name = "printreceiptButton";
             this.printreceiptButton.Size = new System.Drawing.Size(122, 23);
-            this.printreceiptButton.TabIndex = 19;
+            this.printreceiptButton.TabIndex = 7;
             this.printreceiptButton.Text = "Print Receipt";
             this.printreceiptButton.UseVisualStyleBackColor = true;
+            this.printreceiptButton.Click += new System.EventHandler(this.printreceiptButton_Click);
             // 
             // tenderedInput
             // 
             this.tenderedInput.Location = new System.Drawing.Point(117, 225);
             this.tenderedInput.Name = "tenderedInput";
             this.tenderedInput.Size = new System.Drawing.Size(59, 20);
-            this.tenderedInput.TabIndex = 20;
+            this.tenderedInput.TabIndex = 5;
             // 
-            // Form1
+            // newOrder
+            // 
+            this.newOrder.Location = new System.Drawing.Point(164, 304);
+            this.newOrder.Name = "newOrder";
+            this.newOrder.Size = new System.Drawing.Size(75, 23);
+            this.newOrder.TabIndex = 8;
+            this.newOrder.Text = "New Order";
+            this.newOrder.UseVisualStyleBackColor = true;
+            this.newOrder.Click += new System.EventHandler(this.newOrder_Click);
+            // 
+            // sammysSeafoodShack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(526, 336);
+            this.Controls.Add(this.newOrder);
             this.Controls.Add(this.tenderedInput);
             this.Controls.Add(this.printreceiptButton);
             this.Controls.Add(this.calcChange);
@@ -250,15 +257,15 @@
             this.Controls.Add(this.taxButton);
             this.Controls.Add(this.subtotal);
             this.Controls.Add(this.calcTotalButton);
-            this.Controls.Add(this.receipt);
             this.Controls.Add(this.saltywaterInput);
             this.Controls.Add(this.musselsInput);
             this.Controls.Add(this.lobsterInput);
             this.Controls.Add(this.saltyWaterLabel);
             this.Controls.Add(this.musselLabel);
             this.Controls.Add(this.lobsterLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "sammysSeafoodShack";
+            this.Text = "Sammys Seafood Shack";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +279,6 @@
         private System.Windows.Forms.TextBox lobsterInput;
         private System.Windows.Forms.TextBox musselsInput;
         private System.Windows.Forms.TextBox saltywaterInput;
-        private System.Windows.Forms.Label receipt;
         private System.Windows.Forms.Button calcTotalButton;
         private System.Windows.Forms.Label subtotal;
         private System.Windows.Forms.Label taxButton;
@@ -287,6 +293,7 @@
         private System.Windows.Forms.Button calcChange;
         private System.Windows.Forms.Button printreceiptButton;
         private System.Windows.Forms.TextBox tenderedInput;
+        private System.Windows.Forms.Button newOrder;
     }
 }
 

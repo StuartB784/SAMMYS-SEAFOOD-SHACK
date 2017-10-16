@@ -16,7 +16,7 @@ namespace SAMMYS_SEAFOOD_SHACK
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new sammysSeafoodShack());
         }
     }
 }
